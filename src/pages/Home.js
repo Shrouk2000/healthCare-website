@@ -14,6 +14,7 @@ function Home() {
             <h2>Protect Your Health And Take Care To Of Your Health
             </h2>
             <button><a href='#'>Read More</a></button>
+            <span>+</span>
         </div>
         <div className='col-lg-6 col-md-6'>
            <div className='header-box'>
