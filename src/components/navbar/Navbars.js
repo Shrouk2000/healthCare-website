@@ -1,9 +1,10 @@
 import React from 'react'
 import { Navbar,Container,NavDropdown , Nav } from 'react-bootstrap'
 import './Nav.css';
+import { Link } from 'react-router-dom';
 import logo from '../../Assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faSearch ,faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 function Navbars() {
   return (
     <Navbar expand="lg" >
@@ -14,8 +15,8 @@ function Navbars() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link href="#home" className='active'>Home</Nav.Link>
-          <Nav.Link href="#link">Link</Nav.Link>
+          <Link to ="#home" className='active'>Home</Link>
+          <Link to="#link">Link</Link>
           <NavDropdown title="Pages" id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">About Us</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.1">Our Team</NavDropdown.Item>
@@ -36,7 +37,7 @@ function Navbars() {
 
           </NavDropdown>
          
-          <Nav.Link href="#link">Contact US</Nav.Link>
+          <Link to="/contact">Contact US</Link>
           <Nav.Link href="#link">
             <FontAwesomeIcon icon={faSearch}/>
           </Nav.Link>
@@ -44,7 +45,7 @@ function Navbars() {
             <FontAwesomeIcon icon={faPhone} className="phone"/>
              +011213256</Nav.Link>
           <Nav.Link href="#link">
-            <button>Contact US <span> &gt; </span></button>
+            <button>Contact US <span><FontAwesomeIcon icon={faArrowLeft}/> </span></button>
           </Nav.Link>
         
         </Nav>
